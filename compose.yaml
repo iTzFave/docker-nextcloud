@@ -6,8 +6,8 @@ services:
     restart: always # This makes sure that the container starts always together with the host OS. See https://docs.docker.com/reference/compose-file/services/#restart
     container_name: nextcloud-aio-mastercontainer # This line is not allowed to be changed as otherwise AIO will not work correctly
     dns:
-      # - 100.100.100.100  # Tailscale Magic DNS
-      - 100.99.253.102
+      - 100.100.100.100  # Tailscale Magic DNS
+      # - 100.99.253.102
       - 127.0.0.53       # Host's DNS resolver
       - 1.1.1.1          # Fallback DNS
     volumes:
